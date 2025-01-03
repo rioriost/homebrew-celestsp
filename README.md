@@ -47,23 +47,80 @@ Provide the input file containing celestial coordinates and specify the observat
 
 ```bash
 chmod 755 sphere_tsp.py
-./sphere_tsp.py bodies.txt --lat 34.863 --lon 138.843 --height 1000 --date 2025-01-03 --time 18:00:00 --tz +9
+./sphere_tsp.py m_0322_1830.txt --lat 34.863 --lon 138.843 --height 1000 --date 2025-03-22 --time 18:30:00 --tz +9 --first_body M39
 ```
 
 ## Results
 ```
 Location: Lat: 34.863, Lon: 138.843, 1000.0m
-Observation Date/Time: 2025-01-03 18:00:00 +9
+Observation Date/Time: 2025-03-22 18:30:00 +9
 
 Optimal Order of Celestial Bodies:
-Name: NGC6922, RA: 307.47, Dec:-2.19, Altitude:15.60,  Azimuth:256.05, Observable: True
-Name: M71,     RA: 298.44, Dec:18.78, Altitude:19.95,  Azimuth:279.55, Observable: True
-Name: NGC7023, RA: 315.40, Dec:68.16, Altitude:42.49,  Azimuth:333.78, Observable: True
-Name: M81,     RA: 148.89, Dec:69.07, Altitude:19.57,  Azimuth:16.37,  Observable: True
-Name: NGC2281, RA: 102.09, Dec:41.06, Altitude:25.11,  Azimuth:56.14,  Observable: True
-Name: M33,     RA: 23.46,  Dec:30.66, Altitude:83.03,  Azimuth:123.88, Observable: True
-Name: M31,     RA: 10.68,  Dec:41.27, Altitude:81.91,  Azimuth:325.79, Observable: True
-Name: NGC281,  RA: 13.10,  Dec:56.56, Altitude:68.02,  Azimuth:354.70, Observable: True
+Name: M39,     RA: 322.89, Dec:48.25, Altitude:1.12,   Azimuth:333.80, Observable: True
+Name: M52,     RA: 351.19, Dec:61.59, Altitude:21.74,  Azimuth:331.37, Observable: True
+Name: M103,    RA: 23.34,  Dec:60.66, Altitude:35.73,  Azimuth:324.02, Observable: True
+Name: M76,     RA: 25.58,  Dec:51.58, Altitude:35.16,  Azimuth:312.79, Observable: True
+Name: M110,    RA: 10.09,  Dec:41.69, Altitude:21.71,  Azimuth:306.68, Observable: True
+Name: M31,     RA: 10.68,  Dec:41.27, Altitude:21.91,  Azimuth:306.06, Observable: True
+Name: M32,     RA: 10.67,  Dec:40.87, Altitude:21.71,  Azimuth:305.68, Observable: True
+Name: M33,     RA: 23.46,  Dec:30.66, Altitude:26.30,  Azimuth:290.58, Observable: True
+Name: M74,     RA: 24.17,  Dec:15.78, Altitude:19.54,  Azimuth:276.16, Observable: True
+Name: M77,     RA: 40.67,  Dec:-0.01, Altitude:23.89,  Azimuth:252.15, Observable: True
+Name: M45,     RA: 56.60,  Dec:24.11, Altitude:50.17,  Azimuth:266.82, Observable: True
+Name: M36,     RA: 84.08,  Dec:34.13, Altitude:76.00,  Azimuth:271.95, Observable: True
+Name: M38,     RA: 82.17,  Dec:35.82, Altitude:74.58,  Azimuth:279.12, Observable: True
+Name: M37,     RA: 88.07,  Dec:32.55, Altitude:78.95,  Azimuth:261.61, Observable: True
+Name: M1,      RA: 83.63,  Dec:22.02, Altitude:70.04,  Azimuth:234.63, Observable: True
+Name: M35,     RA: 92.27,  Dec:24.34, Altitude:76.98,  Azimuth:218.37, Observable: True
+Name: M78,     RA: 86.69,  Dec:0.08,  Altitude:52.69,  Azimuth:204.35, Observable: True
+Name: M43,     RA: 83.88,  Dec:-5.27, Altitude:46.70,  Azimuth:205.57, Observable: True
+Name: M42,     RA: 83.82,  Dec:-5.39, Altitude:46.57,  Azimuth:205.59, Observable: True
+Name: M79,     RA: 81.04,  Dec:-24.52,Altitude:27.63,  Azimuth:200.75, Observable: True
+Name: M41,     RA: 101.50, Dec:-20.72,Altitude:34.39,  Azimuth:179.68, Observable: True
+Name: M50,     RA: 105.68, Dec:-8.37, Altitude:46.52,  Azimuth:173.52, Observable: True
+Name: M47,     RA: 114.15, Dec:-14.49,Altitude:39.08,  Azimuth:163.77, Observable: True
+Name: M46,     RA: 115.44, Dec:-14.84,Altitude:38.42,  Azimuth:162.32, Observable: True
+Name: M93,     RA: 116.14, Dec:-23.85,Altitude:29.54,  Azimuth:164.30, Observable: True
+Name: M48,     RA: 123.41, Dec:-5.73, Altitude:44.25,  Azimuth:148.28, Observable: True
+Name: M67,     RA: 132.85, Dec:11.81, Altitude:53.09,  Azimuth:121.02, Observable: True
+Name: M44,     RA: 130.05, Dec:19.62, Altitude:60.21,  Azimuth:113.38, Observable: True
+Name: M95,     RA: 160.99, Dec:11.70, Altitude:31.23,  Azimuth:97.85,  Observable: True
+Name: M96,     RA: 161.69, Dec:11.82, Altitude:30.72,  Azimuth:97.29,  Observable: True
+Name: M105,    RA: 161.96, Dec:12.58, Altitude:30.93,  Azimuth:96.38,  Observable: True
+Name: M65,     RA: 169.73, Dec:13.09, Altitude:24.84,  Azimuth:91.23,  Observable: True
+Name: M66,     RA: 170.06, Dec:12.99, Altitude:24.52,  Azimuth:91.13,  Observable: True
+Name: M98,     RA: 183.45, Dec:14.90, Altitude:14.60,  Azimuth:81.99,  Observable: True
+Name: M99,     RA: 184.71, Dec:14.42, Altitude:13.31,  Azimuth:81.72,  Observable: True
+Name: M100,    RA: 185.73, Dec:15.82, Altitude:13.25,  Azimuth:79.96,  Observable: True
+Name: M85,     RA: 186.35, Dec:18.19, Altitude:14.04,  Azimuth:77.58,  Observable: True
+Name: M88,     RA: 188.00, Dec:14.42, Altitude:10.65,  Azimuth:79.93,  Observable: True
+Name: M91,     RA: 188.86, Dec:14.50, Altitude:10.00,  Azimuth:79.40,  Observable: True
+Name: M90,     RA: 189.21, Dec:13.16, Altitude:8.98,   Azimuth:80.33,  Observable: True
+Name: M89,     RA: 188.92, Dec:12.56, Altitude:8.87,   Azimuth:81.00,  Observable: True
+Name: M58,     RA: 189.43, Dec:11.82, Altitude:8.04,   Azimuth:81.33,  Observable: True
+Name: M59,     RA: 190.51, Dec:11.65, Altitude:7.07,   Azimuth:80.88,  Observable: True
+Name: M60,     RA: 190.92, Dec:11.55, Altitude:6.69,   Azimuth:80.73,  Observable: True
+Name: M87,     RA: 187.71, Dec:12.39, Altitude:9.76,   Azimuth:81.81,  Observable: True
+Name: M86,     RA: 186.55, Dec:12.95, Altitude:11.01,  Azimuth:81.97,  Observable: True
+Name: M84,     RA: 186.27, Dec:12.89, Altitude:11.21,  Azimuth:82.18,  Observable: True
+Name: M49,     RA: 187.44, Dec:8.00,  Altitude:7.52,   Azimuth:85.63,  Observable: True
+Name: M61,     RA: 185.48, Dec:4.47,  Altitude:7.13,   Azimuth:89.68,  Observable: True
+Name: M53,     RA: 198.23, Dec:18.17, Altitude:4.65,   Azimuth:71.23,  Observable: True
+Name: M64,     RA: 194.18, Dec:21.68, Altitude:9.77,   Azimuth:70.48,  Observable: True
+Name: M3,      RA: 205.55, Dec:28.38, Altitude:5.24,   Azimuth:58.98,  Observable: True
+Name: M63,     RA: 198.96, Dec:42.03, Altitude:17.41,  Azimuth:50.62,  Observable: True
+Name: M94,     RA: 192.72, Dec:41.12, Altitude:20.99,  Azimuth:53.93,  Observable: True
+Name: M106,    RA: 184.74, Dec:47.30, Altitude:28.79,  Azimuth:50.44,  Observable: True
+Name: M109,    RA: 179.40, Dec:53.37, Altitude:33.91,  Azimuth:44.92,  Observable: True
+Name: M97,     RA: 168.70, Dec:55.02, Altitude:40.35,  Azimuth:44.26,  Observable: True
+Name: M108,    RA: 167.88, Dec:55.67, Altitude:40.87,  Azimuth:43.45,  Observable: True
+Name: M40,     RA: 185.55, Dec:58.08, Altitude:31.81,  Azimuth:38.43,  Observable: True
+Name: M101,    RA: 210.80, Dec:54.35, Altitude:17.65,  Azimuth:35.32,  Observable: True
+Name: M51,     RA: 202.47, Dec:47.20, Altitude:18.02,  Azimuth:44.63,  Observable: True
+Name: M102,    RA: 226.62, Dec:55.76, Altitude:11.79,  Azimuth:28.05,  Observable: True
+Name: M82,     RA: 148.97, Dec:69.68, Altitude:46.66,  Azimuth:22.22,  Observable: True
+Name: M81,     RA: 148.89, Dec:69.07, Altitude:46.97,  Azimuth:23.00,  Observable: True
+Name: M34,     RA: 40.53,  Dec:42.72, Altitude:43.19,  Azimuth:298.84, Observable: True
 ```
 
 ![results.png](results.png)
