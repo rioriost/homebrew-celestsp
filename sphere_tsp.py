@@ -313,7 +313,7 @@ def save_spherical_image(
     fig.text(
         0.5,
         0.01,
-        f"Location: {location_str} | Observation Time: {observation_time_str}",
+        f"Location: {location_str} | Observation Time: {observation_time_str} UTC",
         ha="center",
         fontsize=10,
     )
@@ -330,8 +330,6 @@ def main():
     args = set_args()
 
     df = read_celestial_names(args.input)
-    coordinates = df[["RA", "Dec"]].to_numpy()
-    dist_matrix = distance_matrix(coordinates, coordinates)
 
     print(f"Location: Lat: {args.lat}, Lon: {args.lon}, {args.height}m")
     location = EarthLocation(lat=args.lat, lon=args.lon, height=args.height)
@@ -339,13 +337,14 @@ def main():
     print(f"Observation Date/Time: {args.date} {args.time} {args.tz}")
     if args.default_datetime:
         observation_time = Time(f"{args.date} {args.time}")
-
     else:
         observation_time = Time(f"{args.date} {args.time}") - int(args.tz) * u.hour
 
     westernmost_index = find_westernmost_body(
         df=df, observation_time=observation_time, location=location
     )
+    coordinates = df[["Altitude", "Azimuth"]].to_numpy()
+    dist_matrix = distance_matrix(coordinates, coordinates)
 
     if not df["Observable"].all():
         print(f"\n{RED}Some celestial bodies are NOT observable!!{RESET}")
