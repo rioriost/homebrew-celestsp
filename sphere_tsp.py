@@ -72,7 +72,7 @@ def make_graph(coordinates: np.ndarray = None, dist_matrix: list = []) -> nx.Gra
     return G
 
 
-def find_westernmost_body(
+def find_first_body(
     df: pd.DataFrame = None,
     observation_time: Time = None,
     location: EarthLocation = None,
@@ -90,12 +90,14 @@ def find_westernmost_body(
     """
 
     altaz_frame = AltAz(obstime=observation_time, location=location)
-    closest_distance = np.inf
+    shortest_time_to_set = np.inf
     closest_index = -1
 
     altitudes = []
     azimuths = []
+    times_to_set = []
     observables = []
+
     for i, row in df.iterrows():
         sky_coord = SkyCoord(ra=row["RA"], dec=row["Dec"], unit="deg")
         altaz_coord = sky_coord.transform_to(altaz_frame)
@@ -103,17 +105,34 @@ def find_westernmost_body(
         azimuths.append(altaz_coord.az.deg)
         observables.append(is_observable(altaz_coord))
 
-        # Calculate the distance to (270 degrees azimuth, 0 degrees altitude)
-        azimuth_diff = abs(altaz_coord.az.deg - 270)
-        altitude_diff = abs(altaz_coord.alt.deg - 0)
-        distance = np.sqrt(azimuth_diff**2 + altitude_diff**2)
+        # Calculate the time until the celestial body sets
+        if altaz_coord.alt.deg > 0:
+            # Calculate the rate of change of altitude (degrees per hour)
+            delta_time = Time(observation_time) + np.linspace(0, 24, 1000) * u.hour
+            altaz_future = sky_coord.transform_to(
+                AltAz(obstime=delta_time, location=location)
+            )
+            altitudes_future = altaz_future.alt.deg
 
-        if distance < closest_distance:
-            closest_distance = distance
-            closest_index = i
+            # Find the time when the altitude crosses 0 degrees
+            set_time_index = np.where(altitudes_future <= 0)[0]
+            if len(set_time_index) > 0:
+                time_to_set = (
+                    (delta_time[set_time_index[0]] - observation_time).to(u.hour).value
+                )
+                times_to_set.append(time_to_set)
+
+                if time_to_set < shortest_time_to_set:
+                    shortest_time_to_set = time_to_set
+                    closest_index = i
+            else:
+                times_to_set.append(np.inf)
+        else:
+            times_to_set.append(np.inf)
 
     df["Altitude"] = altitudes
     df["Azimuth"] = azimuths
+    df["TimeToSet"] = times_to_set
     df["Observable"] = observables
 
     return closest_index
@@ -237,9 +256,10 @@ def show_results(df: pd.DataFrame = None) -> None:
         dec = f"{row['Dec']:.2f}"
         alt = f"{row['Altitude']:.2f}"
         azimuth = f"{row['Azimuth']:.2f}"
+        times_to_set = f"{row['TimeToSet']:.2f}"
         obs = row["Observable"]
         print(
-            f"Name: {name},{' '*(7-len(name))} RA: {ra},{' '*(7-len(ra))}Dec:{dec},{' '*(6-len(dec))}Altitude:{alt},{' '*(7-len(alt))}Azimuth:{azimuth},{' '*(7-len(azimuth))}Observable: {obs}"
+            f"Name: {name},{' '*(7-len(name))} RA: {ra},{' '*(7-len(ra))}Dec:{dec},{' '*(6-len(dec))}Altitude:{alt},{' '*(7-len(alt))}Azimuth:{azimuth},{' '*(7-len(azimuth))}Times to set:{times_to_set}{' '*(7-len(times_to_set))}Observable: {obs}"
         )
 
 
@@ -351,20 +371,20 @@ def main():
     else:
         observation_time = Time(f"{args.date} {args.time}") - int(args.tz) * u.hour
 
-    westernmost_index = find_westernmost_body(
+    first_index = find_first_body(
         df=df, observation_time=observation_time, location=location
     )
     if args.first_body:
-        westernmost_index = df.index[df["Name"] == args.first_body][0]
+        first_index = df.index[df["Name"] == args.first_body][0]
     coordinates = df[["Altitude", "Azimuth"]].to_numpy()
     dist_matrix = distance_matrix(coordinates, coordinates)
 
     if not df["Observable"].all():
         print(f"\n{RED}Some celestial bodies are NOT observable!!{RESET}")
 
-    if westernmost_index != -1:
+    if first_index != -1:
         G = make_graph(coordinates=coordinates, dist_matrix=dist_matrix)
-        tsp_path = nx.approximation.greedy_tsp(G, source=westernmost_index)
+        tsp_path = nx.approximation.greedy_tsp(G, source=first_index)
         df_ordered = df.iloc[tsp_path].reset_index(drop=True)
         show_results(df=df_ordered)
         save_spherical_image(
