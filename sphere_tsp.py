@@ -210,6 +210,12 @@ def set_args() -> argparse.Namespace:
         default="results.png",
         help="Filename for the output image.",
     )
+    parser.add_argument(
+        "--first_body",
+        type=str,
+        default="",
+        help="The first celestial body to start the TSP from.",
+    )
     args = parser.parse_args()
     args.default_datetime = args.date == datetime[0] and args.time == datetime[1]
     return args
@@ -331,6 +337,11 @@ def main():
 
     df = read_celestial_names(args.input)
 
+    if args.first_body:
+        if args.first_body not in df["Name"].values:
+            print(f"Error: {args.first_body} is not in the input file.")
+            sys.exit(1)
+
     print(f"Location: Lat: {args.lat}, Lon: {args.lon}, {args.height}m")
     location = EarthLocation(lat=args.lat, lon=args.lon, height=args.height)
     location_str = f"Lat: {args.lat}, Lon: {args.lon}, Height: {args.height}m"
@@ -343,6 +354,8 @@ def main():
     westernmost_index = find_westernmost_body(
         df=df, observation_time=observation_time, location=location
     )
+    if args.first_body:
+        westernmost_index = df.index[df["Name"] == args.first_body][0]
     coordinates = df[["Altitude", "Azimuth"]].to_numpy()
     dist_matrix = distance_matrix(coordinates, coordinates)
 
