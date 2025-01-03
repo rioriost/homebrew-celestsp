@@ -51,6 +51,7 @@ chmod 755 sphere_tsp.py
 ```
 
 ## Results
+```
 Location: Lat: 34.863, Lon: 138.843, 1000.0m
 Observation Date/Time: 2025-01-03 18:00:00 +9
 
@@ -63,8 +64,9 @@ Name: NGC2281, RA: 102.09, Dec:41.06, Altitude:25.11,  Azimuth:56.14,  Observabl
 Name: M33,     RA: 23.46,  Dec:30.66, Altitude:83.03,  Azimuth:123.88, Observable: True
 Name: M31,     RA: 10.68,  Dec:41.27, Altitude:81.91,  Azimuth:325.79, Observable: True
 Name: NGC281,  RA: 13.10,  Dec:56.56, Altitude:68.02,  Azimuth:354.70, Observable: True
+```
 
-[results.png](results.png)
+![results.png](results.png)
 
 ### Command-line Arguments
 
