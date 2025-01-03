@@ -70,7 +70,7 @@ Name: NGC281,  RA: 13.10,  Dec:56.56, Altitude:68.02,  Azimuth:354.70, Observabl
 
 ### Command-line Arguments
 
-- `input`: Path to the input file containing celestial coordinates.
+- `input`: Path to the input file containing celestial names.
 - `--lat`: Latitude of the observation location.
 - `--lon`: Longitude of the observation location.
 - `--height`: Height of the observation location (default: 0).
@@ -78,6 +78,7 @@ Name: NGC281,  RA: 13.10,  Dec:56.56, Altitude:68.02,  Azimuth:354.70, Observabl
 - `--time`: Observation time in HH:MM:SS format.
 - `--tz`: Time zone for observation date/time (default: +9 for JST).
 - `--output`: Filename for the output image (default: results.png).
+- `--first_body`: The first celestial body to start the TSP from.
 
 ## License
 
