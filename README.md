@@ -1,10 +1,10 @@
-# Sphere TSP
+# Celestial TSP
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 
 ## Overview
 
-Sphere TSP is a Python script that calculates the optimal order of celestial bodies for observation based on their coordinates.
+Celestial TSP is a Python script that calculates the optimal order of celestial bodies for observation based on their coordinates.
 The script uses the Traveling Salesman Problem (TSP) algorithm to find the shortest path between celestial bodies and generates a spherical image showing the optimal order.
 
 ## Table of Contents
@@ -19,35 +19,51 @@ The script uses the Traveling Salesman Problem (TSP) algorithm to find the short
 
 ## Installation
 
-Follow these steps to install the project locally.
-
-1. Clone the repository.
-
-    ```bash
-    git clone https://github.com/rioriost/sphere_tsp
-    cd sphere_tsp
-    ```
-
-2. Create and activate a virtual environment.
-
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
-
-3. Install the required packages.
-
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+brew tap rioriost/celestsp
+brew install celestsp
+```
 
 ## Usage
+
+```bash
+celestsp --help
+usage: celestsp [-h] [--lat LAT] [--lon LON] [--height HEIGHT] [--date DATE] [--time TIME] [--tz TZ] [--output OUTPUT] [--first_body FIRST_BODY] input_file_path
+
+Celestial TSP Planner
+
+positional arguments:
+  input_file_path       Input file path with celestial coordinates.
+
+options:
+  -h, --help            show this help message and exit
+  --lat LAT             Latitude of observation location.
+  --lon LON             Longitude of observation location.
+  --height HEIGHT       Height of observation location (in meters).
+  --date DATE           Observation date (YYYY-MM-DD).
+  --time TIME           Observation time (HH:MM:SS).
+  --tz TZ               Time zone offset (e.g., +9 for JST).
+  --output OUTPUT       Filename for the output image.
+  --first_body FIRST_BODY
+                        Name of the celestial body to start the TSP from.
+```
 
 Provide the input file containing celestial coordinates and specify the observation location and time.
 
 ```bash
-chmod 755 sphere_tsp.py
-./sphere_tsp.py m_0322_1830.txt --lat 34.863 --lon 138.843 --height 1000 --date 2025-03-22 --time 18:30:00 --tz +9
+celestsp --lat 34.863 --lon 138.843 --height 1000 --date 2025-03-22 --time 18:30:00 --tz +9 sources/m_0322_1830.txt
+```
+
+```bash
+cat sources/m_0322_1830.txt
+M74
+M33
+M32
+M31
+M110
+M76
+M103
+......
 ```
 
 ## Results
@@ -121,9 +137,10 @@ Name: M102,    RA: 226.62, Dec:55.76, Altitude:11.79,  Azimuth:28.05,  Times to 
 Name: M82,     RA: 148.97, Dec:69.68, Altitude:46.66,  Azimuth:22.22,  Times to set:inf    Observable: True
 Name: M81,     RA: 148.89, Dec:69.07, Altitude:46.97,  Azimuth:23.00,  Times to set:inf    Observable: True
 Name: M34,     RA: 40.53,  Dec:42.72, Altitude:43.19,  Azimuth:298.84, Times to set:4.64   Observable: True
+Plot saved as results_20250216_223009.png
 ```
 
-![results.png](results.png)
+![results_20250216_223009.png](results.png)
 
 ### Command-line Arguments
 
