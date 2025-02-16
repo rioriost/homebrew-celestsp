@@ -140,19 +140,7 @@ Name: M34,     RA: 40.53,  Dec:42.72, Altitude:43.19,  Azimuth:298.84, Times to 
 Plot saved as results_20250216_223009.png
 ```
 
-![results_20250216_223009.png](results.png)
-
-### Command-line Arguments
-
-- `input`: Path to the input file containing celestial names.
-- `--lat`: Latitude of the observation location.
-- `--lon`: Longitude of the observation location.
-- `--height`: Height of the observation location (default: 0).
-- `--date`: Observation date in YYYY-MM-DD format.
-- `--time`: Observation time in HH:MM:SS format.
-- `--tz`: Time zone for observation date/time (default: +9 for JST).
-- `--output`: Filename for the output image (default: results.png).
-- `--first_body`: The first celestial body to start the TSP from.
+![results_20250216_223009.png](https://github.com/rioriost/homebrew-celestsp/blob/main/images/results_20250216_223009.png)
 
 ## License
 
