@@ -54,16 +54,6 @@ class Celestsp < Formula
     sha256 "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
   end
 
-  resource "pandas" do
-    url "https://files.pythonhosted.org/packages/9c/d6/9f8431bacc2e19dca897724cd097b1bb224a6ad5433784a44b587c7c13af/pandas-2.2.3.tar.gz"
-    sha256 "4f18ba62b61d7e192368b84517265a99b4d7ee8912f8708660fb4a366cc82667"
-  end
-
-  resource "pillow" do
-    url "https://files.pythonhosted.org/packages/f3/af/c097e544e7bd278333db77933e535098c259609c4eb3b85381109602fb5b/pillow-11.1.0.tar.gz"
-    sha256 "368da70808b36d73b4b390a8ffac11069f8a5c85f29eff1f1b01bcf3ef5b2a20"
-  end
-
   resource "pyerfa" do
     url "https://files.pythonhosted.org/packages/71/39/63cc8291b0cf324ae710df41527faf7d331bce573899199d926b3e492260/pyerfa-2.0.1.5.tar.gz"
     sha256 "17d6b24fe4846c65d5e7d8c362dcb08199dc63b30a236aedd73875cc83e1f6c0"
@@ -111,7 +101,7 @@ class Celestsp < Formula
 
   def install
     virtualenv_install_with_resources
-    system libexec/"bin/python", "-m", "pip", "install", "astropy", "contourpy", "matplotlib", "numpy", "scipy"
+    system libexec/"bin/python", "-m", "pip", "install", "astropy", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "scipy"
   end
 
   test do
