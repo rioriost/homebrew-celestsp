@@ -54,11 +54,6 @@ class Celestsp < Formula
     sha256 "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
   end
 
-  resource "pyerfa" do
-    url "https://files.pythonhosted.org/packages/71/39/63cc8291b0cf324ae710df41527faf7d331bce573899199d926b3e492260/pyerfa-2.0.1.5.tar.gz"
-    sha256 "17d6b24fe4846c65d5e7d8c362dcb08199dc63b30a236aedd73875cc83e1f6c0"
-  end
-
   resource "pyparsing" do
     url "https://files.pythonhosted.org/packages/8b/1a/3544f4f299a47911c2ab3710f534e52fea62a633c96806995da5d25be4b2/pyparsing-3.2.1.tar.gz"
     sha256 "61980854fd66de3a90028d679a954d5f2623e83144b5afe5ee86f43d762e5f0a"
@@ -101,7 +96,7 @@ class Celestsp < Formula
 
   def install
     virtualenv_install_with_resources
-    system libexec/"bin/python", "-m", "pip", "install", "astropy", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "scipy"
+    system libexec/"bin/python", "-m", "pip", "install", "astropy", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "pyerfa", "scipy"
   end
 
   test do
