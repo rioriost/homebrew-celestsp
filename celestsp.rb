@@ -69,11 +69,6 @@ class Celestsp < Formula
     sha256 "c2db42be2a2518b28e65f9207c4d05e6ff547d1efa4086469ef855e4ab70178e"
   end
 
-  resource "pyyaml" do
-    url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
-    sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
-  end
-
   resource "requests" do
     url "https://files.pythonhosted.org/packages/63/70/2bf7780ad2d390a8d301ad0b550f1581eadbd9a20f896afe06353c2a2913/requests-2.32.3.tar.gz"
     sha256 "55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"
@@ -96,7 +91,7 @@ class Celestsp < Formula
 
   def install
     virtualenv_install_with_resources
-    system libexec/"bin/python", "-m", "pip", "install", "astropy", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "pyerfa", "scipy"
+    system libexec/"bin/python", "-m", "pip", "install", "astropy", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "pyerfa", "pyyaml", "scipy"
   end
 
   test do
