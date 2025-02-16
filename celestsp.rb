@@ -9,11 +9,6 @@ class Celestsp < Formula
 
   depends_on "python@3.13"
 
-  resource "astropy" do
-    url "https://files.pythonhosted.org/packages/45/12/a1c582b3f9df5e2680eae0ed82c8057ae06d6130a1f7a5c0770fa899737e/astropy-7.0.1.tar.gz"
-    sha256 "392feeb443b2437cd4c2e0641a65e0f15ba791e148e9b1e5ed7de7dfcb38e460"
-  end
-
   resource "astropy-iers-data" do
     url "https://files.pythonhosted.org/packages/28/3b/f9039a7062715eef8ac77aa886da69364e663a054ef836a64cbf18a048ec/astropy_iers_data-0.2025.2.10.0.33.26.tar.gz"
     sha256 "03d93817588ef2344e22d56f7a11cba2ecd877ddb2d0fc259a1daf3980c33c3e"
@@ -136,6 +131,7 @@ class Celestsp < Formula
 
   def install
     virtualenv_install_with_resources
+    system libexec/"bin/python", "-m", "pip", "install", "astropy", "pillow_heif", "pyobjc_framework_quartz"
   end
 
   test do
