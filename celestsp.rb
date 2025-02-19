@@ -3,15 +3,15 @@ class Celestsp < Formula
 
   desc "Celestial TSP is a Python script that calculates the optimal order of celestial bodies for observation based on their coordinates."
   homepage "https://github.com/rioriost/homebrew-celestsp/"
-  url "https://files.pythonhosted.org/packages/5e/b8/33eb884bdbd334b69ebe2c4c5b4ee7caec3d2d7bfd0ebf005208d7dcd2c2/celestsp-0.2.0.tar.gz"
-  sha256 "c6c09dce9bd6ea7cbcff48fc182c0d0b37961abfecef2d8458c35f8d015b6a40"
+  url "https://files.pythonhosted.org/packages/5f/31/f0b66105a6b5251cfd22155512a895c33263c86d27a51c5550dd2916c296/celestsp-0.2.1.tar.gz"
+  sha256 "1cdebbc123855cad05ab9395dd472d1eddf0c67385af2b078a4a7bc487475167"
   license "MIT"
 
   depends_on "python@3.13"
 
   resource "astropy-iers-data" do
-    url "https://files.pythonhosted.org/packages/28/3b/f9039a7062715eef8ac77aa886da69364e663a054ef836a64cbf18a048ec/astropy_iers_data-0.2025.2.10.0.33.26.tar.gz"
-    sha256 "03d93817588ef2344e22d56f7a11cba2ecd877ddb2d0fc259a1daf3980c33c3e"
+    url "https://files.pythonhosted.org/packages/90/8f/5b84d3b0cb98708d5bb8b4f1442ca9bdfd3dc1ffd4a1cde715e714e3ff85/astropy_iers_data-0.2025.2.17.0.34.13.tar.gz"
+    sha256 "34b685447a32e63f43811adcee2588bcd55dd77dfc454a05c25f0bbf80066960"
   end
 
   resource "certifi" do
