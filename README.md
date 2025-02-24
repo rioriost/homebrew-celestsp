@@ -142,6 +142,17 @@ Plot saved as results_20250216_223009.png
 
 ![results_20250216_223009.png](https://github.com/rioriost/homebrew-celestsp/blob/main/images/results_20250216_223009.png)
 
+## Release Notes
+
+### 0.2.2 Release
+* Updated for the dependencies.
+
+### 0.2.1 Release
+* Updated for the dependencies.
+
+### 0.1.0 Release
+* Initial release.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
