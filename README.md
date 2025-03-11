@@ -141,9 +141,12 @@ Name: M34,     RA: 40.53,  Dec:42.72, Altitude:43.19,  Azimuth:298.84, Times to 
 Plot saved as results_20250216_223009.png
 ```
 
-![results_20250216_223009.png](https://github.com/rioriost/homebrew-celestsp/blob/main/images/results_20250216_223009.png)
+![results_20250216_223009.png](https://raw.githubusercontent.com/rioriost/homebrew-celestsp/main/images/results_20250216_223009.png)
 
 ## Release Notes
+
+### 0.2.3 Release
+* Updated for the dependencies.
 
 ### 0.2.2 Release
 * Updated for the dependencies.
