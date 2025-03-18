@@ -145,6 +145,9 @@ Plot saved as results_20250216_223009.png
 
 ## Release Notes
 
+### 0.2.4 Release
+* Updated for the dependencies.
+
 ### 0.2.3 Release
 * Updated for the dependencies.
 
