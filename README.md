@@ -5,7 +5,7 @@
 
 ## Overview
 
-Celestial TSP is a Python script that calculates the optimal order of celestial bodies for observation based on their coordinates.
+Celestial TSP calculates optimal observation order for celestial bodies.
 The script uses the Traveling Salesman Problem (TSP) algorithm to find the shortest path between celestial bodies and generates a spherical image showing the optimal order.
 
 ## Table of Contents
