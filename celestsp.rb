@@ -10,8 +10,8 @@ class Celestsp < Formula
   depends_on "python@3.13"
 
   resource "astropy-iers-data" do
-    url "https://files.pythonhosted.org/packages/5d/ed/1b7608de11c298cb6b65276c0afc6b4fef4ddbe205420cb599022d727a96/astropy_iers_data-0.2025.3.17.0.34.53.tar.gz"
-    sha256 "646f050d4af4772ac5a0181fd133a452118ca5b4485af69ebe371ff51129ea28"
+    url "https://files.pythonhosted.org/packages/68/29/f76a6e3704d927a41a88b9c7d428b99ea5106b4c9db0bf529f629913e359/astropy_iers_data-0.2025.3.24.0.35.32.tar.gz"
+    sha256 "4c01603b92800b5a89a2a7418b3f84d66fef3334e8e5af2ec726510db6e1b384"
   end
 
   resource "certifi" do
@@ -55,8 +55,8 @@ class Celestsp < Formula
   end
 
   resource "pyparsing" do
-    url "https://files.pythonhosted.org/packages/8b/1a/3544f4f299a47911c2ab3710f534e52fea62a633c96806995da5d25be4b2/pyparsing-3.2.1.tar.gz"
-    sha256 "61980854fd66de3a90028d679a954d5f2623e83144b5afe5ee86f43d762e5f0a"
+    url "https://files.pythonhosted.org/packages/55/f0/3a81fb395058f5fc84bccb0dc9ca09eddf69b3cc86ccab6729c680121912/pyparsing-3.2.2.tar.gz"
+    sha256 "2a857aee851f113c2de9d4bfd9061baea478cb0f1c7ca6cbf594942d6d111575"
   end
 
   resource "python-dateutil" do
@@ -80,8 +80,8 @@ class Celestsp < Formula
   end
 
   resource "tzdata" do
-    url "https://files.pythonhosted.org/packages/43/0f/fa4723f22942480be4ca9527bbde8d43f6c3f2fe8412f00e7f5f6746bc8b/tzdata-2025.1.tar.gz"
-    sha256 "24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694"
+    url "https://files.pythonhosted.org/packages/95/32/1a225d6164441be760d75c2c42e2780dc0873fe382da3e98a2e1e48361e5/tzdata-2025.2.tar.gz"
+    sha256 "b60a638fcc0daffadf82fe0f57e53d06bdec2f36c4df66280ae79bce6bd6f2b9"
   end
 
   resource "urllib3" do
