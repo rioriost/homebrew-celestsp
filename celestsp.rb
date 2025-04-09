@@ -9,11 +9,6 @@ class Celestsp < Formula
 
   depends_on "python@3.13"
 
-  resource "astropy-iers-data" do
-    url "https://files.pythonhosted.org/packages/c9/70/1ddf7cb16e954bce0ab851b99bfebf4530ddc336f7d59f3df8b3d0fbd694/astropy_iers_data-0.2025.4.7.0.35.30.tar.gz"
-    sha256 "c23fd1f222aa568a63c3a074075ddc90d7adfb5331775d2e5fe113598c69e84c"
-  end
-
   resource "certifi" do
     url "https://files.pythonhosted.org/packages/1c/ab/c9f1e32b7b1bf505bf26f0ef697775960db7932abeb7b516de930ba2705f/certifi-2025.1.31.tar.gz"
     sha256 "3d5da6925056f6f18f119200434a4780a94263f10d1c21d032a6f6b2baa20651"
@@ -91,7 +86,7 @@ class Celestsp < Formula
 
   def install
     virtualenv_install_with_resources
-    system libexec/"bin/python", "-m", "pip", "install", "astropy", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "pyerfa", "pyyaml", "scipy"
+    system libexec/"bin/python", "-m", "pip", "install", "astropy", "astropy-iers-data", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "pyerfa", "pyyaml", "scipy"
   end
 
   test do
