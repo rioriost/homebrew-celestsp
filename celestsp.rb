@@ -3,8 +3,8 @@ class Celestsp < Formula
 
   desc "Celestial TSP calculates optimal observation order for celestial bodies"
   homepage "https://github.com/rioriost/homebrew-celestsp/"
-  url "https://files.pythonhosted.org/packages/fc/3a/3dfba18e7d9341e582f927495a6a005692ac9a07fd3e0bf725df49bb4a42/celestsp-0.2.8.tar.gz"
-  sha256 "924fc0b97ba6c0998b6f2a0286c2167dcd296f0fd40cc36a71ebd0811a175a28"
+  url "https://files.pythonhosted.org/packages/65/73/9e848411aa5c9aceec853ca7e7fdf41e43b89109ac96b795346ca75b9a9c/celestsp-0.2.9.tar.gz"
+  sha256 "f04d45105bcf27c6291be644ab3fd6b6b4514f7631d78d8d628a48a73f761ae5"
   license "MIT"
 
   depends_on "python@3.13"
@@ -45,8 +45,8 @@ class Celestsp < Formula
   end
 
   resource "packaging" do
-    url "https://files.pythonhosted.org/packages/d0/63/68dbb6eb2de9cb10ee4c9c14a0148804425e13c4fb20d61cce69f53106da/packaging-24.2.tar.gz"
-    sha256 "c228a6dc5e932d346bc5739379109d49e8853dd8223571c7c5b55260edc0b97f"
+    url "https://files.pythonhosted.org/packages/a1/d4/1fc4078c65507b51b96ca8f8c3ba19e6a61c8253c72794544580a7b6c24d/packaging-25.0.tar.gz"
+    sha256 "d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"
   end
 
   resource "pyparsing" do
