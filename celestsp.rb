@@ -3,8 +3,8 @@ class Celestsp < Formula
 
   desc "Celestial TSP calculates optimal observation order for celestial bodies"
   homepage "https://github.com/rioriost/homebrew-celestsp/"
-  url "https://files.pythonhosted.org/packages/61/13/4eb8cfe9e040ecbc6ea923aed390f75e42feae3b5f5bcf54107d41bc5b58/celestsp-0.2.10.tar.gz"
-  sha256 "6a8fdc4dec014c49586ade9f7029318b380f3981d7e647d0708fdd8ab4967532"
+  url "https://files.pythonhosted.org/packages/40/e6/f69802862ddf86c9e070209b7a49a80ed9e2d10119f38d9b1ac32503aa8b/celestsp-0.2.11.tar.gz"
+  sha256 "a968a6a1bd79a9f8983268f100234e70cf397f7ef12c4a503830fca55b553048"
   license "MIT"
 
   depends_on "python@3.13"
