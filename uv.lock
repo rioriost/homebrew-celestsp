@@ -26,16 +26,16 @@ wheels = [
 
 [[package]]
 name = "astropy-iers-data"
-version = "0.2025.6.9.14.9.37"
+version = "0.2025.6.16.0.38.47"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/05/e8/53e07cc2caa39247917f92f0874794a9451e4e0825c63818bafbc3bca737/astropy_iers_data-0.2025.6.9.14.9.37.tar.gz", hash = "sha256:d2281011e650ab9a9012405601a6ce4fad8754ce3025cfe6b9c81e4c2ac794a4", size = 1899652 }
+sdist = { url = "https://files.pythonhosted.org/packages/63/ae/efd931d47653f474afb1154d9181f885bf3f82854dcdd979a9e2838470c5/astropy_iers_data-0.2025.6.16.0.38.47.tar.gz", hash = "sha256:58c984976506b8a5c1c969aafe8744b286111d98c8623e66aecc45db9e777121", size = 1899704 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ea/32/ff50513caf194e33fad927a49b3ac2ddd2a1827c7d957f71250ff86a319c/astropy_iers_data-0.2025.6.9.14.9.37-py3-none-any.whl", hash = "sha256:03ff93fd659630eb75019be5e4519f01cf7f09448eea4e6b6745b7405d461812", size = 1955083 },
+    { url = "https://files.pythonhosted.org/packages/3c/35/e4b67e87d7ff182b59047db09dce11c7154273eee428c98fe0828adbf3d7/astropy_iers_data-0.2025.6.16.0.38.47-py3-none-any.whl", hash = "sha256:c8c2c999bb9fa987c89c737bc7e71d83f8a6c8fd874ef03b0adc196c1432e20e", size = 1955135 },
 ]
 
 [[package]]
 name = "celestsp"
-version = "0.2.14"
+version = "0.2.15"
 source = { editable = "." }
 dependencies = [
     { name = "astropy" },
@@ -58,11 +58,11 @@ requires-dist = [
 
 [[package]]
 name = "certifi"
-version = "2025.4.26"
+version = "2025.6.15"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/e8/9e/c05b3920a3b7d20d3d3310465f50348e5b3694f4f88c6daf736eef3024c4/certifi-2025.4.26.tar.gz", hash = "sha256:0a816057ea3cdefcef70270d2c515e4506bbc954f417fa5ade2021213bb8f0c6", size = 160705 }
+sdist = { url = "https://files.pythonhosted.org/packages/73/f7/f14b46d4bcd21092d7d3ccef689615220d8a08fb25e564b65d20738e672e/certifi-2025.6.15.tar.gz", hash = "sha256:d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b", size = 158753 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/4a/7e/3db2bd1b1f9e95f7cddca6d6e75e2f2bd9f51b1246e546d88addca0106bd/certifi-2025.4.26-py3-none-any.whl", hash = "sha256:30350364dfe371162649852c63336a15c70c6510c2ad5015b21c2345311805f3", size = 159618 },
+    { url = "https://files.pythonhosted.org/packages/84/ae/320161bd181fc06471eed047ecce67b693fd7515b16d495d8932db763426/certifi-2025.6.15-py3-none-any.whl", hash = "sha256:2e0c7ce7cb5d8f8634ca55d2ba7e6ec2689a2fd6537d8dec1296a477a4910057", size = 157650 },
 ]
 
 [[package]]
