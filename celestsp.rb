@@ -3,8 +3,8 @@ class Celestsp < Formula
 
   desc "Celestial TSP calculates optimal observation order for celestial bodies"
   homepage "https://github.com/rioriost/homebrew-celestsp/"
-  url "https://files.pythonhosted.org/packages/f7/12/ffd1bac35a3181d6547a70205d6e0c554df0dbef2fc9d893d98592897989/celestsp-0.2.16.tar.gz"
-  sha256 "8eba09caa49fb6cdd62f974381231023746204cb3faaf84594a4e86bac280840"
+  url "https://files.pythonhosted.org/packages/c8/b2/e52a50f36a83fd7dadda5821738d558df5970a2e73adff1fa0e349d3f5b0/celestsp-0.2.17.tar.gz"
+  sha256 "4ba5694694fb64d098b1224651e4d5df2eddb2ede43ba555b3d470c5239be37a"
   license "MIT"
 
   depends_on "python@3.13"
@@ -79,14 +79,9 @@ class Celestsp < Formula
     sha256 "b60a638fcc0daffadf82fe0f57e53d06bdec2f36c4df66280ae79bce6bd6f2b9"
   end
 
-  resource "urllib3" do
-    url "https://files.pythonhosted.org/packages/8a/78/16493d9c386d8e60e442a35feac5e00f0913c0f4b7c217c11e8ec2ff53e0/urllib3-2.4.0.tar.gz"
-    sha256 "414bc6535b787febd7567804cc015fee39daab8ad86268f1310a9250697de466"
-  end
-
   def install
     virtualenv_install_with_resources
-    system libexec/"bin/python", "-m", "pip", "install", "astropy", "astropy-iers-data", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "pyerfa", "pyyaml", "scipy"
+    system libexec/"bin/python", "-m", "pip", "install", "astropy", "astropy-iers-data", "contourpy", "matplotlib", "numpy", "pandas", "pillow", "pyerfa", "pyyaml", "scipy", "urllib3"
   end
 
   test do
