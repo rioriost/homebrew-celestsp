@@ -3,8 +3,8 @@ class Celestsp < Formula
 
   desc "Celestial TSP calculates optimal observation order for celestial bodies"
   homepage "https://github.com/rioriost/homebrew-celestsp/"
-  url "https://files.pythonhosted.org/packages/8b/28/f277dea30768206e20bd22d5761f56e2b22696acc976a8427ca65a87206f/celestsp-0.2.23.tar.gz"
-  sha256 "c8eb39f6debcac52fba55f35157a4afdc0dcd74e352512d5a5358dafcc97d70c"
+  url "https://files.pythonhosted.org/packages/14/e6/dd7c8cc7ed6defa13418a24f5597dacc4068304dc98912c782649670c324/celestsp-0.2.24.tar.gz"
+  sha256 "e27d6487b6361f05e2fbf5f6300eb377c82c0e5029310d84f69e1a730c988dad"
   license "MIT"
 
   depends_on "python@3.13"
@@ -25,8 +25,8 @@ class Celestsp < Formula
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/11/7f/29c9c3fe4246f6ad96fee52b88d0dc3a863c7563b0afc959e36d78b965dc/fonttools-4.59.1.tar.gz"
-    sha256 "74995b402ad09822a4c8002438e54940d9f1ecda898d2bb057729d7da983e4cb"
+    url "https://files.pythonhosted.org/packages/0d/a5/fba25f9fbdab96e26dedcaeeba125e5f05a09043bf888e0305326e55685b/fonttools-4.59.2.tar.gz"
+    sha256 "e72c0749b06113f50bcb80332364c6be83a9582d6e3db3fe0b280f996dc2ef22"
   end
 
   resource "idna" do
