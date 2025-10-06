@@ -3,15 +3,15 @@ class Celestsp < Formula
 
   desc "Celestial TSP calculates optimal observation order for celestial bodies"
   homepage "https://github.com/rioriost/homebrew-celestsp/"
-  url "https://files.pythonhosted.org/packages/5f/82/9589eccde101ca8a809ee5fa2011ab674d2602d0c62fdef38222b025d193/celestsp-0.2.26.tar.gz"
-  sha256 "67af37aff0be6a7f23569c1df83d742e134bc1eb2c9bb8ba1088c6183ebb3f7e"
+  url "https://files.pythonhosted.org/packages/18/b3/a872b8a6587061492c6899690064c7130923b2417f929143821d49082501/celestsp-0.2.27.tar.gz"
+  sha256 "fb7f167441652951e387403fc8282c4b9c77455e87261536fdb94f58d532de49"
   license "MIT"
 
   depends_on "python@3.13"
 
   resource "certifi" do
-    url "https://files.pythonhosted.org/packages/dc/67/960ebe6bf230a96cda2e0abcf73af550ec4f090005363542f0765df162e0/certifi-2025.8.3.tar.gz"
-    sha256 "e564105f78ded564e3ae7c923924435e1daa7463faeab5bb932bc53ffae63407"
+    url "https://files.pythonhosted.org/packages/4c/5b/b6ce21586237c77ce67d01dc5507039d444b630dd76611bbca2d8e5dcd91/certifi-2025.10.5.tar.gz"
+    sha256 "47c09d31ccf2acf0be3f701ea53595ee7e0b8fa08801c6624be771df09ae7b43"
   end
 
   resource "charset-normalizer" do
@@ -25,8 +25,8 @@ class Celestsp < Formula
   end
 
   resource "fonttools" do
-    url "https://files.pythonhosted.org/packages/27/d9/4eabd956fe123651a1f0efe29d9758b3837b5ae9a98934bdb571117033bb/fonttools-4.60.0.tar.gz"
-    sha256 "8f5927f049091a0ca74d35cce7f78e8f7775c83a6901a8fbe899babcc297146a"
+    url "https://files.pythonhosted.org/packages/4b/42/97a13e47a1e51a5a7142475bbcf5107fe3a68fc34aef331c897d5fb98ad0/fonttools-4.60.1.tar.gz"
+    sha256 "ef00af0439ebfee806b25f24c8f92109157ff3fac5731dc7867957812e87b8d9"
   end
 
   resource "idna" do
