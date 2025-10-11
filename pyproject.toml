@@ -3,15 +3,15 @@ name = "celestsp"
 authors = [
     {name = "Rio Fujita", email = "rifujita@microsoft.com"},
 ]
-version = "0.2.27"
+version = "0.2.28"
 license = {file = "LICENSE"}
 description = "Celestial TSP is a Python script that calculates the optimal order of celestial bodies for observation based on their coordinates."
 readme = "README.md"
 
 requires-python = ">=3.13"
 dependencies = [
-    "astropy>=7.1.0",
-    "matplotlib>=3.10.6",
+    "astropy>=7.1.1",
+    "matplotlib>=3.10.7",
     "networkx>=3.5",
     "pandas>=2.3.3",
     "requests>=2.32.5",
